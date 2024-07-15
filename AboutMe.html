@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orrin S. Anderson's Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <a href="Assignment07.html"><h3>Orrin S. Anderson</h3></a>
+    </header>
+    <div class="navbar">
+        <a href="Assignment07.html">Home</a> <!-- Added Home button -->
+        <div class="dropdown">
+            <button class="dropbtn">Course
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="https://gaia.cs.umass.edu/kurose_ross/eighth.php" target="_blank">Kurose and Ross</a>
+                <a href="https://www.w3schools.com/" target="_blank">W3school</a>
+                <a href="https://www.geeksforgeeks.org/web-development/" target="_blank">GeeksforGeeks</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Browser
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#" onclick="displayBrowserInfo('navigator')">Navigator</a>
+                <a href="#" onclick="displayBrowserInfo('window')">Window</a>
+                <a href="#" onclick="displayBrowserInfo('screen')">Screen</a>
+                <a href="#" onclick="displayBrowserInfo('location')">Location</a>
+                <a href="#" onclick="displayBrowserInfo('geolocation')">Geolocation</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">About
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="AboutMe.html">About Me</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="info" style="display: none; margin: 20px; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);"></div>
+    <script src="Assignment07.js"></script>
+
+    <main>
+        <section id="about">
+            <h2>About the Developer</h2>
+            <p>Hi, I'm Orrin S. Anderson, I am a senior at
+                 <a href="https://www.qc.cuny.edu/">
+                    Queens College
+                </a>. I am a passionate student that's pursuing a career in Computer Science,
+                I enjoy creating dynamic and responsive web applications, as well as script development. 
+                My expertise includes HTML, CSS, JavaScript, and more.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="Contact Me Form" onsubmit="submitForm(); return false;">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+                <button type="submit" class="submit-btn">Send</button>
+                <input type="reset" value="Reset">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
